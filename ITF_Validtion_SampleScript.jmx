@@ -61,6 +61,16 @@
             <stringProp name="Argument.value">${__P(testduration_itf,300)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="rampup_itf_min" elementType="Argument">
+            <stringProp name="Argument.name">rampup_itf_min</stringProp>
+            <stringProp name="Argument.value">${__P(rampup_itf_min,1000)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="testduration_itf_min" elementType="Argument">
+            <stringProp name="Argument.name">testduration_itf_min</stringProp>
+            <stringProp name="Argument.value">${__P(testduration_itf_min,3000)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
         </collectionProp>
       </Arguments>
       <hashTree/>
@@ -110,10 +120,10 @@
       <com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup guiclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroupGui" testclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup" testname="bzm - Arrivals Thread Group">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <stringProp name="TargetLevel">${threads_sample_itf}</stringProp>
-        <stringProp name="RampUp">${rampup_itf}</stringProp>
+        <stringProp name="TargetLevel">${__P(threads_sample_itf,100)}</stringProp>
+        <stringProp name="RampUp">${__P(rampup_itf_min,10)}</stringProp>
         <stringProp name="Steps">3</stringProp>
-        <stringProp name="Hold">${testduration_itf}</stringProp>
+        <stringProp name="Hold">${__P(testduration_itf_min,300)}</stringProp>
         <stringProp name="LogFilename"></stringProp>
         <stringProp name="Iterations"></stringProp>
         <boolProp name="same_user_on_next_iteration">false</boolProp>
