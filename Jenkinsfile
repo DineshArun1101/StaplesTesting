@@ -49,7 +49,7 @@ loginTest_0530
 
                     def branchExists = bat(
                         script: """
-                            git ls-remote --heads https://github.com/DineshArun1101/featureTesting.git ${params.BRANCH_NAME}
+                            git ls-remote --heads https://github.com/DineshArun1101/StaplesTesting.git ${params.BRANCH_NAME}
                         """,
                         returnStdout: true
                     ).trim()
@@ -78,7 +78,7 @@ Please provide valid branch name.
                     $class: 'GitSCM',
                     branches: [[name: "*/${params.BRANCH_NAME}"]],
                     userRemoteConfigs: [[
-                        url: 'https://github.com/DineshArun1101/featureTesting.git',
+                        url: 'https://github.com/DineshArun1101/StaplesTesting.git',
                         credentialsId: 'MyGitHubCreds'
                     ]]
                 ])
