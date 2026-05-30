@@ -45,10 +45,8 @@ echo "======================================="
   -Gthreads_sample_itf=$THREADS_SAMPLE_ITF \
   -Grampup_itf=$RAMPUP_ITF \
   -Gtestduration_itf=$TESTDURATION_ITF \
-
   -Jrampup_itf_min=$RAMPUP_ITF_MIN \
   -Jtestduration_itf_min=$TESTDURATION_ITF_MIN \
-
   -Grampup_itf_min=$RAMPUP_ITF_MIN \
   -Gtestduration_itf_min=$TESTDURATION_ITF_MIN
 
